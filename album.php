@@ -13,7 +13,19 @@
 <body>
 
 <?php
-mkdir($_GET["name"]);
+
+$drctemp = $_GET["name"];
+
+if (file_exists($drctemp))  
+{ 
+    echo "upload to {$drctemp} album"; 
+} 
+else 
+{ 
+    mkdir($drctemp); 
+} 
+
+
 ?>
 
 <?php
